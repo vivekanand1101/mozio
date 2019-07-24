@@ -57,6 +57,13 @@ DATABASES = {
     'default': env.db(),
 }
 
+CACHE_ENABLED = env.bool('CACHE_ENABLED', default=False)
+
+if CACHE_ENABLED:
+    CACHES = {
+        'default': env.cache(),
+    }
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'

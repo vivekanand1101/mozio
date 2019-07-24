@@ -5,3 +5,5 @@ LANGUAGES = [(lang.iso639_3_code, lang.name)
 
 CURRENCIES = [(cur.letter, cur.name)
               for cur in sorted(pycountry.currencies, key=lambda x: x.name)]
+
+HOTSPOT_KEY_FORMAT = 'hotspot:{lat}:{long}'
